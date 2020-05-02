@@ -156,6 +156,12 @@ const purchases = [
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let totals = purchases.map((element) => element.price);
-let reducer2 = (accumulator2, currentValue2) => accumulator2 + currentValue2;
-let bobsTotal = totals.reduce(reducer2) / 2;
+let totals = purchases.filter((element) => element.owner === "Bob");
+console.log(totals);
+
+let reducer2 = (accumulator2, currentValue2) =>
+  accumulator2 + currentValue2.price;
+// console.log(currentValue
+
+let bobsTotal = totals.reduce(reducer2, 0);
+console.log(bobsTotal);
