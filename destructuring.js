@@ -103,8 +103,11 @@ function largeNumbers({ first, second, third }) {
 */
 
 function numberGroups({ a, b, c }) {
-  let c1 = a.length;
-  let c2 = b.length;
-  let c3 = c.length;
-  console.log(c1, c2, c3);
+  if (a.length > b.length && a.length > c.length) {
+    return a;
+  } else if (b.length > a.length && b.length > c.length) {
+    return b;
+  } else if (c.length > a.length && c.length > b.length) {
+    return c;
+  }
 }
