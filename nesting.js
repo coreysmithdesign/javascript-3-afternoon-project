@@ -112,9 +112,19 @@ var cat = {
     2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 */
 
-//Code Here
 var grumpyActivity;
 var fluffy2ndFriend;
+
+for (var i = 0; i < cat.catFriends[0].activities.length; i++) {
+  if (cat.catFriends[i].name === "Lazy Bones") {
+    fluffy2ndFriend = cat.catFriends[i].name;
+  }
+  for (var j = 0; j < cat.catFriends[i].activities.length; j++) {
+    if (cat.catFriends[i].activities[j] === "eat food") {
+      grumpyActivity = cat.catFriends[i].activities[j];
+    }
+  }
+}
 
 ////////// PROBLEM 4 //////////
 
