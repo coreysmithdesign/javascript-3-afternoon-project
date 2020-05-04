@@ -87,7 +87,15 @@ function double(obj) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+function secrets(obj) {
+  var tellMe = "";
+  for (var key in obj) {
+    if (key.includes("sh", 0)) {
+      tellMe += obj[key];
+    }
+  }
+  return tellMe;
+}
 
 /* 
   Sometimes it's needed to delete object properties. 
